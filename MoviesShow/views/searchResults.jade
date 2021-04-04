@@ -1,0 +1,367 @@
+doctype html
+//
+  author: W3layouts
+  author URL: http://w3layouts.com
+  License: Creative Commons Attribution 3.0 Unported
+  License URL: http://creativecommons.org/licenses/by/3.0/
+html(lang='vi')
+  head
+    title Kết quả tìm kiếm
+    // for-mobile-apps
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='One Movies Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    // //for-mobile-apps
+    link(href='css/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/style.css', rel='stylesheet', type='text/css', media='all')
+    link(rel='stylesheet', href='css/faqstyle.css', type='text/css', media='all')
+    link(href='css/medile.css', rel='stylesheet', type='text/css')
+    link(href='css/single.css', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='css/contactstyle.css', type='text/css', media='all')
+    // news-css
+    link(rel='stylesheet', href='news-css/news.css', type='text/css', media='all')
+    // //news-css
+    // list-css
+    link(rel='stylesheet', href='list-css/list.css', type='text/css', media='all')
+    // //list-css
+    // font-awesome icons
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    // //font-awesome icons
+    // js
+    script(type='text/javascript', src='js/jquery-2.1.4.min.js')
+    // //js
+    link(href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300', rel='stylesheet', type='text/css')
+    // start-smoth-scrolling
+    script(type='text/javascript', src='js/move-top.js')
+    script(type='text/javascript', src='js/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+      });
+    // start-smoth-scrolling
+    // tables
+    link(rel='stylesheet', type='text/css', href='list-css/table-style.css')
+    link(rel='stylesheet', type='text/css', href='list-css/basictable.css')
+    script(type='text/javascript', src='list-js/jquery.basictable.min.js')
+    script(type='text/javascript').
+      $(document).ready(function() {
+      $('#table').basictable();
+      });
+    // //tables
+  body
+    // header
+    .header
+      .container
+        .w3layouts_logo
+          a(href='/')
+            h1
+              | One
+              span Movies
+        .w3_search(onmouseleave='hiddenTable()')
+          form(action='/searchResults', method='post')
+            script(src='js/searchBox2.js')
+            script.
+                function hiddenTable(){
+                document.getElementById("myTable").style.display="none";
+                }
+                function showTable(){
+                document.getElementById("myTable").style.display="block";
+                LogData()
+                }
+            input#myInput(type='text', name='search', onkeyup='LogData()', placeholder='Search', required='' onclick="showTable()")
+            input(type='submit', value='Go')
+            table#myTable
+              tbody
+                tr.header
+        .w3l_sign_in_register
+        .clearfix  
+    // //header
+    // bootstrap-pop-up
+    #myModal.modal.video-modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModal')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            | Sign In & Sign Up
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          section
+            .modal-body
+              .w3_login_module
+                .module.form-module
+                  .toggle
+                    i.fa.fa-times.fa-pencil
+                    .tooltip Click Me
+                  .form
+                    h3 Login to your account
+                    form(action='#', method='post')
+                      input(type='text', name='Username', placeholder='Username', required='')
+                      input(type='password', name='Password', placeholder='Password', required='')
+                      input(type='submit', value='Login')
+                  .form
+                    h3 Create an account
+                    form(action='#', method='post')
+                      input(type='text', name='Username', placeholder='Username', required='')
+                      input(type='password', name='Password', placeholder='Password', required='')
+                      input(type='email', name='Email', placeholder='Email Address', required='')
+                      input(type='text', name='Phone', placeholder='Phone Number', required='')
+                      input(type='submit', value='Register')
+                  .cta
+                    a(href='#') Forgot your password?
+    script.
+      $('.toggle').click(function(){
+      // Switches the Icon
+      $(this).children('i').toggleClass('fa-pencil');
+      // Switches the forms
+      $('.form').animate({
+      height: "toggle",
+      'padding-top': 'toggle',
+      'padding-bottom': 'toggle',
+      opacity: "toggle"
+      }, "slow");
+      });
+    // //bootstrap-pop-up
+    // nav
+    .movies_nav
+      .container
+        nav.navbar.navbar-default
+          .navbar-header.navbar-left
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+          // Collect the nav links, forms, and other content for toggling
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse.navbar-right
+            nav
+              ul.nav.navbar-nav
+                li.w3_home_act
+                  a(href='/') Trang chủ
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    | Thể loại 
+                    b.caret
+                  ul.dropdown-menu.multi-column.columns-3
+                    li
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/the-loai?genre=Phim hoạt hình") Phim hài hước
+                          li
+                            a(href="/the-loai?genre=Phim hoạt hình") Phim hoạt hình
+                          li
+                            a(href="/the-loai?genre=Phim thuyết minh") Phim thuyết minh
+                          li
+                            a(href="/the-loai?genre=Phim hành động") Phim hành động
+                          li
+                            a(href="/the-loai?genre=Phim tình cảm-Lãng mạn") Phim tình cảm-Lãng mạn
+                          li
+                            a(href="/the-loai?genre=Phim cổ trang") Phim cổ trang
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/the-loai?genre=Phim viễn tưởng") Phim viễn tưởng
+                          li
+                            a(href="/the-loai?genre=Phim phiêu lưu") Phim phiêu lưu
+                          li
+                            a(href="/the-loai?genre=Phim tâm lý") Phim tâm lý
+                          li
+                            a(href="/the-loai?genre=Phim chính kịch - Drama") Phim chính kịch - Drama
+                          li
+                            a(href="/the-loai?genre=Phim hình sự") Phim hình sự
+                          li
+                            a(href="/the-loai?genre=Phim chiến tranh") Phim chiến tranh
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/the-loai?genre=Phim hồi hộp-Gây cấn") Phim hồi hộp-Gây cấn
+                          li
+                            a(href="/the-loai?genre=Phim Bí ẩn-Siêu nhiên") Phim Bí ẩn-Siêu nhiên
+                          li
+                            a(href="/the-loai?genre=Phim kinh dị") Phim kinh dị 
+                          li
+                            a(href="/the-loai?genre=Phim chiếu rạp") Phim chiếu rạp  
+                          li
+                            a(href="/the-loai?genre=Phim gia đình") Phim gia đình   
+                          li
+                            a(href="/the-loai?genre=Phim tài liệu") Phim tài liệu
+                      .clearfix
+                
+                li
+                  a(href='phim-bo') PHIM BỘ
+                li
+                  a(href='phim-le') PHIM LẺ
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown')
+                    | Quốc gia
+                    b.caret
+                  ul.dropdown-menu.multi-column.columns-3
+                    li
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/quoc-gia?country=Việt Nam") Việt Nam
+                          li
+                            a(href="/quoc-gia?country=Nhật Bản") Nhật Bản
+                          li
+                            a(href="/quoc-gia?country=Hàn Quốc") Hàn Quốc
+                          li
+                            a(href="/quoc-gia?country=Trung Quốc") Trung Quốc
+                          li
+                            a(href="/quoc-gia?country=Hồng Kông") Hồng Kông
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/quoc-gia?country=Mỹ") Mỹ
+                          li
+                            a(href="/quoc-gia?country=Canada") Canada
+                          li
+                            a(href="/quoc-gia?country=Ấn Độ") Ấn Độ
+                      .col-sm-4
+                        ul.multi-column-dropdown
+                          li
+                            a(href="/quoc-gia?country=Anh") Anh
+                          li
+                            a(href="/quoc-gia?country=Pháp") Pháp
+                      .clearfix
+    // //nav
+    // banner
+    .faq
+      h4.latest-text.w3_faq_latest_text.w3_latest_text Kết quả tìm kiếm
+      .container
+        .agileits-news-top
+          ol.breadcrumb
+            li
+              a(href='/') Trang chủ
+            li.active Tìm kiếm
+        .bs-example.bs-example-tabs(role='tabpanel', data-example-id='togglable-tabs')
+          #myTabContent.tab-content
+            #home.tab-pane.fade.in.active(role='tabpanel', aria-labelledby='home-tab')
+              .agile-news-table
+                .w3ls-news-result
+                  h4
+                    | Số lượng kết quả tìm được : 
+                    span #{countMovie}
+                table#table-breakpoint
+                  thead
+                    tr
+                      th No.
+                      th Movie Name
+                      th Năm SX
+                      th Chất lượng
+                      th Quốc gia
+                      th Thể loại
+                      th Rating
+                  tbody
+                   each movie, i in searchList
+                    tr
+                      td #{i+1}
+                      td.w3-list-img
+                        a(href='/movieinfo?id=#{movie.id}')
+                          img(src='#{movie.srcImg}', alt='', style="width:auto;height:auto;")
+                          span (id:#{movie.id})  #{movie.name1}
+                          span (id:#{movie.id})  #{movie.name2}
+                      td 2011
+                      td HD
+                      td.w3-list-info
+                       each country, j in movie.country
+                        li
+                            a(href="/quoc-gia?country=#{country}") #{country}
+                            
+                      td.w3-list-info(style="white-space: normal;")
+                       each genre, j in movie.genres
+                        li
+                            a(href="/the-loai?genre=#{genre}") #{genre}
+                        br
+                      td #{movie.imdb}
+    //    .blog-pagenat-wthree
+          ul
+            li
+              a.frist(href='#') Prev
+            li
+              a(href='#') 1
+            li
+              a(href='#') 2
+            li
+              a(href='#') 3
+            li
+              a(href='#') 4
+            li
+              a(href='#') 5
+            li
+              a.last(href='#') Next
+    // //faq-banner
+    // footer
+      .container
+        .w3ls_footer_grid
+          .col-md-6.w3ls_footer_grid_left
+            .w3ls_footer_grid_left1
+              h2 Subscribe to us
+              .w3ls_footer_grid_left1_pos
+                form(action='#', method='post')
+                  input(type='email', name='email', placeholder='Your email...', required='')
+                  input(type='submit', value='Send')
+          .col-md-6.w3ls_footer_grid_right
+            a(href='index.html')
+              h2
+                | One
+                span Movies
+          .clearfix  
+        .col-md-5.w3ls_footer_grid1_left
+          p
+            | © 2016 One Movies. All rights reserved | Design by 
+            a(href='http://w3layouts.com/') W3layouts
+        .col-md-7.w3ls_footer_grid1_right
+          ul
+            li
+              a(href='genres.html') Movies
+            li
+              a(href='faq.html') FAQ
+            li
+              a(href='horror.html') Action
+            li
+              a(href='genres.html') Adventure
+            li
+              a(href='comedy.html') Comedy
+            li
+              a(href='icons.html') Icons
+            li
+              a(href='contact.html') Contact Us
+        .clearfix  
+    // //footer
+    // Bootstrap Core JavaScript
+    script(src='js/bootstrap.min.js')
+    script.
+      $(document).ready(function(){
+      $(".dropdown").hover(
+      function() {
+      $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+      $(this).toggleClass('open');
+      },
+      function() {
+      $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+      $(this).toggleClass('open');
+      }
+      );
+      });
+    // //Bootstrap Core JavaScript
+    // here stars scrolling icon
+    script(type='text/javascript').
+      $(document).ready(function() {
+      /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+      */
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      });
+    // //here ends scrolling icon

@@ -1,0 +1,193 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>MoviesShow</Name>
+    <RootNamespace>MoviesShow</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>daf4a87d-3c13-47bd-bb36-b1d463e87be7</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <StartWebBrowser>False</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="package.json" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\contactstyle.css" />
+    <Content Include="public\css\faqstyle.css" />
+    <Content Include="public\css\flexslider.css" />
+    <Content Include="public\css\font-awesome.min.css" />
+    <Content Include="public\css\jquery.slidey.min.css" />
+    <Content Include="public\css\medile.css" />
+    <Content Include="public\css\news.css" />
+    <Content Include="public\css\owl.carousel.css" />
+    <Content Include="public\css\popuo-box.css" />
+    <Content Include="public\css\single.css" />
+    <Content Include="public\css\style.css" />
+    <Content Include="public\fonts\fontawesome-webfont.eot" />
+    <Content Include="public\fonts\fontawesome-webfont.svg" />
+    <Content Include="public\fonts\fontawesome-webfont.ttf" />
+    <Content Include="public\fonts\fontawesome-webfont.woff" />
+    <Content Include="public\fonts\fontawesome-webfont.woff2" />
+    <Content Include="public\fonts\FontAwesome.otf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\1.jpg" />
+    <Content Include="public\images\2.jpg" />
+    <Content Include="public\images\3.jpg" />
+    <Content Include="public\images\4.jpg" />
+    <Content Include="public\images\5.jpg" />
+    <Content Include="public\images\6.jpg" />
+    <Content Include="public\images\7.jpg" />
+    <Content Include="public\images\arrow.png" />
+    <Content Include="public\images\arrow1.png" />
+    <Content Include="public\images\c1.jpg" />
+    <Content Include="public\images\c10.jpg" />
+    <Content Include="public\images\c11.jpg" />
+    <Content Include="public\images\c12.jpg" />
+    <Content Include="public\images\c2.jpg" />
+    <Content Include="public\images\c3.jpg" />
+    <Content Include="public\images\c4.jpg" />
+    <Content Include="public\images\c5.jpg" />
+    <Content Include="public\images\c6.jpg" />
+    <Content Include="public\images\c7.jpg" />
+    <Content Include="public\images\c8.jpg" />
+    <Content Include="public\images\c9.jpg" />
+    <Content Include="public\images\h1-1.jpg" />
+    <Content Include="public\images\h1.jpg" />
+    <Content Include="public\images\h10.jpg" />
+    <Content Include="public\images\h11.jpg" />
+    <Content Include="public\images\h12.jpg" />
+    <Content Include="public\images\h2-1.jpg" />
+    <Content Include="public\images\h2.jpg" />
+    <Content Include="public\images\h3-1.jpg" />
+    <Content Include="public\images\h3.jpg" />
+    <Content Include="public\images\h4.jpg" />
+    <Content Include="public\images\h5.jpg" />
+    <Content Include="public\images\h6.jpg" />
+    <Content Include="public\images\h7.jpg" />
+    <Content Include="public\images\h8.jpg" />
+    <Content Include="public\images\h9.jpg" />
+    <Content Include="public\images\img-sp.png" />
+    <Content Include="public\images\m1.jpg" />
+    <Content Include="public\images\m10.jpg" />
+    <Content Include="public\images\m11.jpg" />
+    <Content Include="public\images\m12.jpg" />
+    <Content Include="public\images\m13.jpg" />
+    <Content Include="public\images\m14.jpg" />
+    <Content Include="public\images\m15.jpg" />
+    <Content Include="public\images\m16.jpg" />
+    <Content Include="public\images\m17.jpg" />
+    <Content Include="public\images\m18.jpg" />
+    <Content Include="public\images\m19.jpg" />
+    <Content Include="public\images\m2.jpg" />
+    <Content Include="public\images\m20.jpg" />
+    <Content Include="public\images\m21.jpg" />
+    <Content Include="public\images\m22.jpg" />
+    <Content Include="public\images\m23.jpg" />
+    <Content Include="public\images\m3.jpg" />
+    <Content Include="public\images\m4.jpg" />
+    <Content Include="public\images\m5.jpg" />
+    <Content Include="public\images\m6.jpg" />
+    <Content Include="public\images\m7.jpg" />
+    <Content Include="public\images\m8.jpg" />
+    <Content Include="public\images\m9.jpg" />
+    <Content Include="public\images\n1.jpg" />
+    <Content Include="public\images\n10.jpg" />
+    <Content Include="public\images\n11.jpg" />
+    <Content Include="public\images\n2.jpg" />
+    <Content Include="public\images\n3.jpg" />
+    <Content Include="public\images\n4.jpg" />
+    <Content Include="public\images\n5.jpg" />
+    <Content Include="public\images\n6.jpg" />
+    <Content Include="public\images\n7.jpg" />
+    <Content Include="public\images\n8.jpg" />
+    <Content Include="public\images\n9.jpg" />
+    <Content Include="public\images\new.gif" />
+    <Content Include="public\images\new.png" />
+    <Content Include="public\images\news1.jpg" />
+    <Content Include="public\images\play-button.png" />
+    <Content Include="public\images\user.jpg" />
+    <Content Include="public\js\bootstrap.min.js" />
+    <Content Include="public\js\easing.js" />
+    <Content Include="public\js\jquery-2.1.4.min.js" />
+    <Content Include="public\js\jquery.dotdotdot.min.js" />
+    <Content Include="public\js\jquery.flexslider.js" />
+    <Content Include="public\js\jquery.magnific-popup.js" />
+    <Content Include="public\js\jquery.slidey.js" />
+    <Content Include="public\js\move-top.js" />
+    <Content Include="public\js\owl.carousel.js" />
+    <Content Include="public\js\simplePlayer.js" />
+    <Content Include="public\list-css\basictable.css" />
+    <Content Include="public\list-css\list.css" />
+    <Content Include="public\list-css\table-style.css" />
+    <Content Include="public\list-js\jquery.basictable.min.js" />
+    <Content Include="public\list-js\jquery.mobile.custom.min.js" />
+    <Content Include="public\list-js\jquery.tools.min.js" />
+    <Content Include="public\news-css\news.css" />
+    <Content Include="README.md" />
+    <Content Include="views\HomePage.jade">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\homePage1.jade">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\horror.html" />
+    <Content Include="views\icons.html" />
+    <Content Include="views\index.html" />
+    <Content Include="views\list.jade">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\MovieInfo.jade">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\news-single.html" />
+    <Content Include="views\news.html" />
+    <Content Include="views\Page1.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\series.html" />
+    <Content Include="views\short-codes.html" />
+    <Content Include="views\single.html" />
+    <Content Include="views\test.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\test.jade">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\list-css\" />
+    <Folder Include="public\list-js\" />
+    <Folder Include="public\news-css\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+</Project>

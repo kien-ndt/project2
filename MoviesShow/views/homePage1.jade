@@ -1,0 +1,29 @@
+doctype html
+input(id='pageNav',type='hidden',name='pageNav',value='#{pageNavs}')
+html
+    head
+        meta(charset="UTF-8")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title="? ? hôm qua em ??n tr??ng"
+    body
+        ul
+            li 
+                a(href='phim-bo') Phim b?
+            li 
+                a(href='phim-le') Phim l?
+        each movie, i in movies
+            ul
+                li
+                    a(href='/movieinfo?id=#{movie.id}') #{movie.name1}
+                li
+                    a(href='/movieinfo?id=#{movie.id}') #{movie.name2}
+                li
+                    a(href='/movieinfo?id=#{movie.id}')
+                        img(src='#{movie.srcImg}', alt='404ERROR' height='300px' width=auto)
+        div
+            a(href='#{pageNavs[0].prevPageLink}') prePage
+            a(href='#{pageNavs[0].nextPageLink}') nextPage
+
+
+        
+            
